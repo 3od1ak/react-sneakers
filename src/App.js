@@ -1,8 +1,7 @@
-import Content from './components/Main/Content';
-import Header from './components/Main/Header';
-import AllSneakers from './components/Main/AllSneakers';
+import Content from './components/Content';
+import Header from './components/Header';
 import Sneakers from './assets/sneakers.json';
-import Basket from './components/Basket/Basket';
+import Basket from './components/Basket';
 
 function App() {
   return (
@@ -22,10 +21,9 @@ function App() {
         </div>
       </div>
       <div className="filterSneakers">
-        <Content />
-        <Content />
-        <Content />
-        <Content />
+        {Sneakers.map((value, i) => (
+          <Content key={i} {...value} />
+        ))}
       </div>
       {/* <-- Содержание */}
     </div>
