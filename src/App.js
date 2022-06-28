@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Content from './components/Main/Content';
+import Header from './components/Main/Header';
+import AllSneakers from './components/Main/AllSneakers';
+import Sneakers from './assets/sneakers.json';
+import Basket from './components/Basket/Basket';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper clear">
+      {/* Корзина --> */}
+      <Basket />
+      {/* <-- Корзина */}
+      {/* Хедер --> */}
+      <Header />
+      {/* <-- Хедер */}
+      {/* Содержание --> */}
+      <div className="sneakers-and-search">
+        <h1 className="allsneakers">Все кроссовки</h1>
+        <div className="search-block">
+          <img className="search-img" width={15} height={15} src="img/search.png" alt="" />
+          <input placeholder="Поиск"></input>
+        </div>
+      </div>
+      <div className="filterSneakers">
+        <Content />
+        <Content />
+        <Content />
+        <Content />
+      </div>
+      {/* <-- Содержание */}
     </div>
   );
 }
