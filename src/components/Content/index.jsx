@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Content.module.scss';
 
-const Content = ({ title, price, imageUrl, heart, like, onPlus, onHeart }) => {
+const Content = ({ title, price, imageUrl, heart, like, onPlus, onHeart, favorited = false }) => {
   const [statusPlus, setStatusPlus] = useState(false);
-  const [statusHeart, setStatusHeart] = useState(false);
+  const [statusHeart, setStatusHeart] = useState(favorited);
+  // В statusHeart передается значение true || false и улетает
 
   const onClickPlus = () => {
     onPlus({ title, price, imageUrl });
@@ -25,6 +26,7 @@ const Content = ({ title, price, imageUrl, heart, like, onPlus, onHeart }) => {
           width={32}
           height={32}
           src={statusHeart === true ? heart[0] : heart[1]}
+          // состояние favorited берется отсюда. {if statusHeart === true} = красное сердце, {else} = серое
           alt="Heart"
         />
         <img
