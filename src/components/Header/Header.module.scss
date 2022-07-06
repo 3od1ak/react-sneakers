@@ -44,7 +44,12 @@ header {
     .price {
       margin-right: 30px;
       display: flex;
+      cursor: pointer;
       // align-items: center;
+    }
+
+    .favorite {
+      margin-right: 20px;
     }
   }
 }

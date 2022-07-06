@@ -21,9 +21,10 @@ body {
 .filterSneakers {
   display: flex;
   overflow: auto;
-  padding: 0 40px 0 40px;
+  padding: 0 40px 40px 40px;
   gap: 40px;
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .clear {
@@ -54,6 +55,9 @@ body {
   justify-content: space-between;
   // margin-right: 40px;
 
+  button {
+  }
+
   .allsneakers {
     // Удаление дефолт стилей h1
     margin-block-start: 0em;
@@ -62,7 +66,7 @@ body {
     margin-inline-end: 0px;
     // -------------------------
 
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 30px;
     color: #000000;
     padding-left: 40px;
@@ -73,13 +77,20 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
+    position: relative;
+
+    .close_search {
+      cursor: pointer;
+      position: absolute;
+      right: -10;
+    }
 
     .search-img {
       width: 15px;
       height: 15px;
     }
     // --- Паддинги ----
-    padding: 13px 15px 13px 18px;
+    padding: 13px 0px 13px 18px;
     // padding: 0;
     // --- Паддинги ----
     border-radius: 10px;
@@ -94,5 +105,24 @@ body {
       font-size: 15px;
       width: 200px;
     }
+  }
+}
+
+.myFavorites {
+  display: flex;
+  padding: 10px 0 10px 40px;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    width: 35px;
+    height: 35px;
+    left: 145px;
+    top: 257px;
+
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    cursor: pointer;
   }
 }
