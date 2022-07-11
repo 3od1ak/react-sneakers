@@ -28,6 +28,7 @@ function App() {
     axios.get('https://62bb481d7bdbe01d529b55db.mockapi.io/Favorite').then((res) => {
       setFavoriteItems(res.data);
     });
+
     // Получить содержимое блока "Все кроссовки" и обновить `items`
     axios.get('https://62bb481d7bdbe01d529b55db.mockapi.io/Cart').then((res) => {
       setContentItems(res.data);
